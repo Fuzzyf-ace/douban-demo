@@ -4,7 +4,7 @@ import 'package:douban/features/search_page/model/search_page_viewmodel.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:douban/network/ApiClient.dart';
 
-final searchTextProvider = StateProvider<String>((ref) => '');
+final searchTextProvider = StateProvider.autoDispose<String>((ref) => '');
 
 class SearchNotifier extends AutoDisposeNotifier<SearchResultViewModel> {
   @override
