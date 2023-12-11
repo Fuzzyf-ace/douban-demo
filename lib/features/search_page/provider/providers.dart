@@ -57,3 +57,12 @@ final subjectListProvider = Provider.autoDispose<List<SearchSubject>>((ref) {
     error: (error) => [],
   );
 });
+
+final onFetchingProvider = Provider.autoDispose<bool>((ref) {
+  final searchResult = ref.watch(searchResultProvider);
+  return searchResult.when(
+    fetching: (searchResult) => true,
+    ready: (searchResult) => false,
+    error: (error) => false,
+  );
+});
