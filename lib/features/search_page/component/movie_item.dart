@@ -30,7 +30,7 @@ class MovieItem extends StatelessWidget {
                 Row(
                   children: [
                     const Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: EdgeInsets.only(right: 4.0),
                       child: Icon(
                         Icons.play_circle_outline,
                         color: Colors.red,
